@@ -1,0 +1,320 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.conteiner {
+    max-width: 1920px;
+    margin: 0px auto;
+    background-color: #0669b2;
+}
+
+@media (max-width:1200px) {
+    .container {
+        max-width: 970;
+    }
+
+}
+
+@media (max-width:992px) {
+    .container {
+        max-width: 750;
+    }
+}
+
+@media (max-width:767px) {
+    .container {
+        max-width: none;
+    }
+}
+
+/* полоса прокрутки (скроллбар) */
+::-webkit-scrollbar {
+    width: 24px;
+    /* ширина для вертикального скролла */
+    height: 8px;
+    /* высота для горизонтального скролла */
+    background-color: #143861;
+    opacity: 50%;
+}
+
+/* ползунок скроллбара */
+::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 9em;
+    box-shadow: inset 1px 1px 10px #ffffff;
+    opacity: 50%;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #253861;
+    opacity: 50%;
+}
+
+/* Стрелки */
+
+::-webkit-scrollbar-button:vertical:start:decrement {
+    background: linear-gradient(120deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+        linear-gradient(240deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+        linear-gradient(0deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
+    background-color: #f6f8f4;
+    opacity: 50%;
+}
+
+::-webkit-scrollbar-button:vertical:end:increment {
+    background:
+        linear-gradient(300deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+        linear-gradient(60deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+        linear-gradient(180deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
+    background-color: #f6f8f4;
+    opacity: 50%;
+}
+
+::-webkit-scrollbar-button:horizontal:start:decrement {
+    background:
+        linear-gradient(30deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+        linear-gradient(150deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+        linear-gradient(270deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
+    background-color: #f6f8f4;
+    opacity: 50%;
+}
+
+::-webkit-scrollbar-button:horizontal:end:increment {
+    background:
+        linear-gradient(210deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+        linear-gradient(330deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+        linear-gradient(90deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
+    background-color: #f6f8f4;
+    opacity: 50%;
+}
+
+.square {
+    position: absolute;
+    width: 1920px;
+    height: 589px;
+    background: #000;
+    opacity: 33%;
+    z-index: 1;
+}
+
+.square2 {
+    position: absolute;
+    width: 1920px;
+    height: 589px;
+    background: #000;
+    opacity: 33%;
+    z-index: 1;
+    top: 642px;
+}
+
+.logo {
+    position: absolute;
+    z-index: 2;
+    padding: 17px 40px;
+}
+
+.logo-b {
+    position: absolute;
+    z-index: 2;
+    width: 136px;
+    height: 90px;
+    top: 17px;
+    left: 38px;
+    opacity: 0%;
+}
+
+.header__content {
+    position: absolute;
+    z-index: 2;
+    white-space: nowrap;
+    top: 35px;
+    left: 980px;
+    color: #fff;
+    text-shadow: #000 7px 7px 24px;
+    overflow: initial;
+
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+}
+
+.header__content__log {
+    font-size: 36px;
+    padding: 0px 20px;
+
+    tansition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+}
+
+.header__content__log:hover {
+    color: #d4a500;
+}
+
+.header__h2 {
+    position: absolute;
+    color: #fff;
+    z-index: 2;
+    text-shadow: #000 7px 7px 24px;
+    overflow: initial;
+    font-size: 65px;
+    top: 172px;
+    left: 52px;
+}
+
+.header__button {
+    position: absolute;
+    z-index: 2;
+    height: 93px;
+    width: 423px;
+    background: #d4a500;
+    border-radius: 100px;
+    border: 0;
+    top: 376px;
+    left: 101px;
+
+    tansition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+
+    font-size: 48px;
+    color: #fff;
+}
+
+.header__button:hover {
+    color: #fff;
+    background: #fff;
+    tansition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+
+    font-size: 48px;
+    color: #d4a500;
+}
+
+.header__button__op {
+    position: absolute;
+    z-index: 1;
+    height: 93px;
+    width: 423px;
+    background: #d4a500;
+    border-radius: 100px;
+    border: 0;
+    top: 376px;
+    left: 101px;
+}
+
+
+
+.header__button__op {
+    box-shadow: #000 7px 7px 24px;
+    overflow: initial;
+    opacity: 75%;
+}
+
+.header__button2 {
+    position: absolute;
+    z-index: 2;
+    height: 93px;
+    width: 423px;
+    background: #d4a500;
+    border-radius: 100px;
+    border: 0;
+    top: 376px;
+    left: 595px;
+
+    tansition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+
+    font-size: 48px;
+    color: #fff;
+}
+
+.header__button2:hover {
+    color: #fff;
+    background: #fff;
+    tansition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+
+    font-size: 48px;
+    color: #d4a500;
+}
+
+.header__button__op2 {
+    position: absolute;
+    z-index: 1;
+    height: 93px;
+    width: 423px;
+    background: #d4a500;
+    border-radius: 100px;
+    border: 0;
+    top: 376px;
+    left: 595px;
+}
+
+.header__button__op2 {
+    box-shadow: #000 7px 7px 24px;
+    overflow: initial;
+    opacity: 75%;
+}
+
+.content__h2 {
+    position: absolute;
+    color: #fff;
+    z-index: 2;
+    text-shadow: #000 7px 7px 24px;
+    overflow: initial;
+    font-size: 52px; /* 36px */
+    top: 858px;
+    left: 1120px;
+}
+
+.content__h2-1 {
+    position: absolute;
+    color: #fff;
+    z-index: 2;
+    text-shadow: #000 7px 7px 24px;
+    overflow: initial;
+    font-size: 26px; /* 36px */
+    top: 918px;
+    left: 1120px;
+}
+
+.wrapper {
+    position: absolute;
+    z-index: 2;
+    top: 642px;
+    transform: (-50%, -50%);
+}
+
+.slideshow-container, .mySlides fade, .fade, .img-1 {
+    position: relative;
+    z-index: 2;
+    width: 841px;
+    margin: auto;
+}
+
+button {
+    position: absolute;
+    z-index: 3;
+    width: 100px;
+    height: 100px;
+}
+
+.btn_nav{
+    background-color:#323232;
+    border-bottom:2px solid #777777;
+    /*Below are two new line which enable opacity*/
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+}

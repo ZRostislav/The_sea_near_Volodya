@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>M "TSV"</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="conteiner">
+        <img src="images/logo.png" class="logo" />
+        <button
+          class="logo-b"
+          onclick="window.location.href = 'index.html';"
+        ></button>
+
+        <div class="header__content">
+          <a class="header__content__log">ДОМАШНЯЯ</a>
+          <a class="header__content__log">ИНФОРМАЦИЯ</a>
+          <a class="header__content__log">СВЯЗЬ</a>
+          <a class="header__content__log">КОНТАКТЫ</a>
+        </div>
+
+        <h2 align="center" class="header__h2">
+          МОРЕ У ВОЛОДИ<br />ЗАХОДИ В ГОСТИ К НАМ, ВСЕ ГДА !
+        </h2>
+        <button class="header__button">Купить билеты</button>
+        <button class="header__button__op"></button>
+        <button class="header__button2">Карта</button>
+        <button class="header__button__op2"></button>
+
+        <div class="square"></div>
+      </div>
+    </header>
+
+    <main class="content">
+      <div class="conteiner">
+        <img src="images/bagrant.jpg" width="1920px" height="2000px" />
+
+        <div class="wrapper">
+          <div class="slideshow-container">
+            <button class="btn_nav"></button>
+
+            <div class="mySlides fade">
+              <img src="images/1-area.jpg" alt="" class="img-1" />
+              <img src="images/4-area.jpg" alt="" class="img-2" />
+              <img src="images/5-area.jpg" alt="" class="img-3" />
+            </div>
+          </div>
+        </div>
+
+        <h2 align="center" class="content__h2">МНОЖЕСТВО РАЗВЛЕЧЕНИЙ</h2>
+        <h2 align="center" class="content__h2-1">
+          ТАКИХ КАК ГИДРОСКУТАРЫ, СЕРФИНГ,<br />ГИДРОЦИКЛЫ И МНОЖЕСТВО ВОДНЫХ
+          АТТРАКЦИОНОВ!
+        </h2>
+
+        <div class="square2"></div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="conteiner"></div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Добавить плавную прокрутку до всех ссылок
+        $("a").on("click", function (event) {
+          // Убедись в этом что .hash имеет значение перед переопределением поведения по умолчанию
+          if (this.hash !== "") {
+            // Запретить поведение щелчка якоря по умолчанию
+            event.preventDefault();
+
+            // Хранить хэш
+            var hash = this.hash;
+
+            // Использование метода animate() jQuery для добавления плавной прокрутки страницы
+            // Необязательное число (800) указывает количество миллисекунд, необходимых для прокрутки до указанной области
+            $("html, body").animate(
+              {
+                scrollTop: $(hash).offset().top,
+              },
+              800,
+              function () {
+                // Добавить хэш (#) для URL-адреса после завершения прокрутки (поведение щелчка по умолчанию)
+                window.location.hash = hash;
+              }
+            );
+          } // Конец, если
+        });
+      });
+    </script>
+  </body>
+</html>
